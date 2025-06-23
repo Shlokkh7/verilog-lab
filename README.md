@@ -24,7 +24,7 @@ A collection of Verilog modules and their testbenches created as part of my lear
 
 ## 🚀 How to simulate (using Vivado)
 
-1. Open **Vivado** (tested with Vivado 2024.1)
+1. Open **Vivado** (tested with Vivado 2019.1)
 2. Create or open a Vivado project
 3. Add the Verilog design files and their corresponding testbenches
 4. Set the testbench file as the **Top Module**

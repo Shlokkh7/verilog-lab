@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module bcd_encoder(
+module bcd_encoder(                        // Also called 10-to-4 BCD encoder
     input [9:0] i_i,
     input i_en,
     output reg [3:0] o_y

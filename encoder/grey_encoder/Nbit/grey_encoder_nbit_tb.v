@@ -24,7 +24,7 @@ module grey_encoder_nbit_tb();
             for(k = 0; k < 2**n; k = k + 1) begin
                 i_en = j;
                 i_bin = k;
-                #1 $display("%b | %b", i_bin, o_grey);
+                #1 $strobe("%b | %b", i_bin, o_grey);
                 #4;
             end
         end

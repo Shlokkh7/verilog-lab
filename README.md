@@ -3,6 +3,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![HDL](https://img.shields.io/badge/Language-Verilog-orange)
 ![Built with Vivado](https://img.shields.io/badge/Built%20with-Vivado-0f5ca8?logo=xilinx&logoColor=white)
+![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat-square)
+
 
 **Digital design projects and testbenches in Verilog — from basic gates to custom multipliers.**
 
@@ -33,11 +35,11 @@ A collection of Verilog modules and their testbenches created as part of my lear
 
 ---
 
-## 🧪 Tools Used
+## 🛠 Tools Used
 
-- **Vivado (XSIM)** – for simulation and synthesis  
-- **GTKWave** (optional) – if `.vcd` output is generated  
-- **VS Code** – for writing and organizing code
+**Vivado 2019.1**
+All modules and simulations are designed and tested using Vivado 2019.1.
+Compatibility with newer versions is not guaranteed.
 
 ---
 

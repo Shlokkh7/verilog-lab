@@ -1,25 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 15.06.2025 16:38:02
-// Design Name: 
-// Module Name: gates_using_2x1_mux
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module gates_using_2x1_mux
     #(parameter n = 2)
     (
@@ -28,7 +7,7 @@ module gates_using_2x1_mux
     output NAND,                      // NAND Gate
     output OR,                        // OR Gate    
     output NOR,                       // NOR Gate
-    output na_x                       // NOT Gate    
+    output NOT                       // NOT Gate    
     );
     
 
@@ -78,6 +57,6 @@ module gates_using_2x1_mux
     mux_generic_1bit #(.INS(n)) M6 (
         .w({1'b0, 1'b1}),
         .s(x),
-        .f(na_x)
+        .f(NOT)
     );
 endmodule

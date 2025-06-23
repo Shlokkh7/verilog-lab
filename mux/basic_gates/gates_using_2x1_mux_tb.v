@@ -1,32 +1,10 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 15.06.2025 17:07:04
-// Design Name: 
-// Module Name: gates_using_2x1_mux_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-
-module gates_using_2x1_mux_tb(
-
-    );
+module gates_using_2x1_mux_tb();
     
     parameter n = 2;
     reg x, y;
-    wire AND, NAND, OR, NOR, na_x;
+    wire AND, NAND, OR, NOR, NOT;
     
     gates_using_2x1_mux #(.n(n)) uut (
         .x(x),
@@ -35,7 +13,7 @@ module gates_using_2x1_mux_tb(
         .NAND(NAND),
         .OR(OR),
         .NOR(NOR),
-        .na_x(na_x)
+        .NOT(NOT)
     );
     
     initial

@@ -26,7 +26,7 @@ A collection of Verilog modules and their testbenches created as part of my lear
 
 ### 🧮 n-bit Carry Lookahead Adder
 📌 The waveform below shows transitions for multiple test cases. A few representative ones are listed below for reference.
--Here n = 8 (As you can noted in the testbench).
+- Here n = 8 (As you can noted in the testbench).
 | x | y | cin | Sum | Cout |
 |---|---|-----|-----|------|
 | 0 | 0 |  0  |  0  |   0  |

@@ -10,6 +10,6 @@ module D_latch(
     assign Q_b = ~Q;
     always @(D, clk) begin
         if (clk)
-            Q <= D;
+            Q <= D;                    // Non blocking statement
     end
 endmodule

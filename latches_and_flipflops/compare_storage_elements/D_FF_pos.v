@@ -7,6 +7,6 @@ module D_FF_pos(
     );
     
     always @(posedge clk) begin
-        Q <= D;
+        Q <= D;                    // Non blocking statement
     end
 endmodule

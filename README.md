@@ -26,14 +26,26 @@ A collection of Verilog modules and their testbenches created as part of my lear
 
 ### 🧮 n-bit Carry Lookahead Adder
 📌 The waveform below shows transitions for multiple test cases. A few representative ones are listed below for reference.
-- Here n = 8 (As you can noted in the testbench).
+
+![Carry Lookahead Adder Waveform](combinational/adder/CLA/cla_nbits.png)
+Here n = 8 (As you can note from the testbench file).
 | x | y | cin | Sum | Cout |
 |---|---|-----|-----|------|
 | 0 | 0 |  0  |  0  |   0  |
 | 1 | 2 |  1  |  4  |   0  |
 | 147 | 219 | 1 | 111 | 1 |
 
-![Carry Lookahead Adder Waveform](combinational/adder/CLA/cla_nbits.png)
+- [View 4-bit Adder Waveform](combinational/mux/4x1/mux_4x1_nbits.png)
+
+### 🔀 4-to-1 Multiplexer
+![Multiplexer Waveform](combinational/mux/4x1/mux_4x1_nbits.png)
+- Select lines choose between inputs: w0, w1, w2, w3
+
+### Sequential Circuits
+
+### T Flip-Flop
+![D FF Waveform](sequential/latches_and_flipflops/D_FF_reset/D_FF_reset.png)
+- With Asynchronous reset_n and synchronous clear_n
 
 ---
 

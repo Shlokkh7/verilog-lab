@@ -18,7 +18,22 @@ A collection of Verilog modules and their testbenches created as part of my lear
 - Adders, subtractors, and simple ALUs  
 - Sequential blocks like registers and counters  
 - An 8-bit array multiplier (structural + behavioral)  
-- Fully automated testbenches  
+- Fully automated testbenches and screenshots of waveforms
+
+---
+
+## 🔬 Module Simulations
+
+### 🧮 n-bit Carry Lookahead Adder
+📌 The waveform below shows transitions for multiple test cases. A few representative ones are listed below for reference.
+Here n = 8 (As you can noted in the testbench).
+| x | y | cin | Sum | Cout |
+|---|---|-----|-----|------|
+| 0 | 0 |  0  |  0  |   0  |
+| 1 | 2 |  1  |  4  |   0  |
+| 147 | 219 | 1 | 111 | 1 |
+
+![Carry Lookahead Adder Waveform](combinational/adder/CLA/cla_nbits.png)
 
 ---
 

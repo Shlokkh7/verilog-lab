@@ -7,6 +7,6 @@ module D_FF_neg(
     );
     
     always @(negedge clk) begin
-        Q <= D;
+        Q <= D;                    // Non blocking statement
     end
 endmodule

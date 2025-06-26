@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module shift_register_load // Right Shift or load
+module shift_registers_load // Right Shift or load
     #(parameter n = 4)
     (
     input clk,

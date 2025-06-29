@@ -28,12 +28,12 @@ module PISO     // Right Shift and Parallel Load
     endgenerate
     
     // Load of Shift_n
-    /*mux_generic_1bit #(.INS(2)) mux_inst_nth (
+    mux_generic_1bit #(.INS(2)) mux_inst_nth (
                 .w({I[n - 1], 0}),
                 .s(load),
                 .f(Q_next[n - 1])
-           );*/
-    assign Q_next[n - 1] = load ? I[n - 1]:0;
+           );
+    // assign Q_next[n - 1] = load ? I[n - 1]:0;
       
     genvar j;
     generate

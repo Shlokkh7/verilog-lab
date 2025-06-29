@@ -26,9 +26,6 @@ module bi_directional_register_tb;
     end
 
     initial begin
-        $display("Time\tReset\tDir\tSI\tSO");
-        $monitor("%0dns\t%b\t%b\t%b\t%b", $time, reset_n, R_L_n, SI, SO);
-
         // Initial values
         reset_n = 1;
         SI = 0;

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module detector_101_moore_tb();
+module detector_101_tb();
 
     reg clk;
     reg clear_n;

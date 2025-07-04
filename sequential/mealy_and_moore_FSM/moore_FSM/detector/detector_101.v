@@ -15,7 +15,7 @@ module detector_101(
     
     // Next State Logic
     assign Q_next[0] = x;
-    assign Q_next[1] = (x & Q_reg[1] & ~Q_reg[0]) | (~x & Q_reg[0]);
+    assign Q_next[1] = (x & Q_reg[1] & ~ Q_reg[0]) | (~x & Q_reg[0]);
     
     // Output logic
     assign z = Q_reg[1] & Q_reg[0];

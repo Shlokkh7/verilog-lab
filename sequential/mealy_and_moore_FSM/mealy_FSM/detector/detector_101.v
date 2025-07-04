@@ -16,8 +16,8 @@ module detector_101(
     D_FF FF1 (.D(Q_next[1]), .clk(clk), .clear_n(clear_n), .Q(Q_reg[1]));
     
     // Next State Logic
-    assign Q_next[0] = x & ~Q_reg[1];
-    assign Q_next[1] = ~x & ~ Q_reg[1] & Q_reg[0];
+    assign Q_next[0] = x & ~ Q_reg[1];
+    assign Q_next[1] = ~ x & ~ Q_reg[1] & Q_reg[0];
     
     // Output Logic
     assign z = x & Q_reg[1] & ~Q_reg[0];

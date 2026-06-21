@@ -1,4 +1,24 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 02.06.2025 21:36:05
+// Design Name: 
+// Module Name: fa_behavioral
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module fa_behavioral(
     input x, y, cin,
@@ -20,7 +40,7 @@ module fa_behavioral(
         .c(c1)
     );
     
-    always @(x, y)
+    always @(x, y, c0, c1)
     begin
         cout = c0 | c1;
     end

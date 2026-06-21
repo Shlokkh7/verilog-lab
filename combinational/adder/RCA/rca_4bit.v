@@ -1,60 +1,40 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.06.2025 12:16:06
-// Design Name: 
-// Module Name: rca_4bit
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module rca_4bit(
-    input [3:0] x, y,
-    input cin,
-    output [3:0] s,
-    output cout
+    input [3:0] x_i, y_i,
+    input cin_i,
+    output [3:0] s_o,
+    output cout_o
     );
     
     wire [3:1] c;                   // Internal carry
     fa_dataflow FA0 (
-        .x(x[0]),
-        .y(y[0]),
-        .cin(cin),
-        .s(s[0]),
-        .cout(c[1])
+        .x_i(x_i[0]),
+        .y_i(y_i[0]),
+        .cin_i(cin_i),
+        .s_o(s_o[0]),
+        .cout_o(c[1])
     );
     fa_dataflow FA1 (
-        .x(x[1]),
-        .y(y[1]),
-        .cin(c[1]),
-        .s(s[1]),
-        .cout(c[2])
+        .x_i(x_i[1]),
+        .y_i(y_i[1]),
+        .cin_i(c[1]),
+        .s_o(s_o[1]),
+        .cout_o(c[2])
      );
      fa_dataflow FA2 (
-        .x(x[2]),
-        .y(y[2]),
-        .cin(c[2]),
-        .s(s[2]),
-        .cout(c[3])
+        .x_i(x_i[2]),
+        .y_i(y_i[2]),
+        .cin_i(c[2]),
+        .s_o(s_o[2]),
+        .cout_o(c[3])
      );
      fa_dataflow FA3 (
-        .x(x[3]),
-        .y(y[3]),
-        .cin(c[3]),
-        .s(s[3]),
-        .cout(cout)
+        .x_i(x_i[3]),
+        .y_i(y_i[3]),
+        .cin_i(c[3]),
+        .s_o(s_o[3]),
+        .cout_o(cout_o)
      );
       
 endmodule

@@ -1,37 +1,17 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.06.2025 12:41:30
-// Design Name: 
-// Module Name: rca_nbits
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module rca_nbits
-    #(parameter n = 4)              // Default value
+    #(parameter n = 8)              // Default value
     (
-    input [n - 1: 0] x, y,
-    input cin,
-    output [n - 1: 0] s,
-    output cout
+    input [n - 1: 0] x_i, y_i,
+    input cin_i,
+    output [n - 1: 0] s_o,
+    output cout_o
     );
     
     wire [n : 0] c;
-    assign c[0] = cin;
-    assign cout = c[n];                     // Non blocking statement
+    assign c[0] = cin_i;
+    assign cout_o = c[n];                     // Non blocking statement
         
     generate
         genvar k;
@@ -39,11 +19,11 @@ module rca_nbits
         for (k = 0; k < n; k = k + 1)
         begin: stage
             fa_dataflow FA (
-                .x(x[k]),
-                .y(y[k]),
-                .cin(c[k]),
-                .s(s[k]),
-                .cout(c[k + 1])
+                .x_i(x_i[k]),
+                .y_i(y_i[k]),
+                .cin_i(c[k]),
+                .s_o(s_o[k]),
+                .cout_o(c[k + 1])
             ); 
         end
     endgenerate 

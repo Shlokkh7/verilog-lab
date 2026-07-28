@@ -24,6 +24,12 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "View Schematic",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File run_schematic.ps1 half_adder",
+      "problemMatcher": []
     }
   ]
 }

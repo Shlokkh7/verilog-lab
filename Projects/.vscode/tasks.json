@@ -4,12 +4,22 @@
     {
       "label": "Run in Vivado",
       "type": "shell",
-      "command": "powershell -ExecutionPolicy Bypass -File run_vivado.ps1 half_adder",
+      "command": "powershell -ExecutionPolicy Bypass -File run_vivado.ps1 fa_structural",
       "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
-      },
+      }
+    },
+    {
+      "label": "Run Simulation",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File run_simulate.ps1 fa_structural fa_structural_tb",
+      "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated"

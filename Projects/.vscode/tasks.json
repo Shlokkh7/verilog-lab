@@ -28,7 +28,7 @@
     {
       "label": "View Schematic",
       "type": "shell",
-      "command": "powershell -ExecutionPolicy Bypass -File run_schematic.ps1 half_adder",
+      "command": "powershell -ExecutionPolicy Bypass -File run_schematic.ps1 fa_structural",
       "problemMatcher": []
     }
   ]

@@ -30,6 +30,4 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 
 launch_simulation
-run all
-
-puts "===== SIMULATION COMPLETE ====="
+start_gui   

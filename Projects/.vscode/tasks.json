@@ -30,6 +30,20 @@
       "type": "shell",
       "command": "powershell -ExecutionPolicy Bypass -File run_schematic.ps1 fa_structural",
       "problemMatcher": []
+    },
+    {
+      "label": "Synthesize",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File run_synthesize.ps1 fa_structural",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Implement",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -File run_implement.ps1 fa_structural",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
     }
   ]
 }

@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="1"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -60,6 +60,20 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../sequential/counters/synchronous/BCD_counter/BCD_counter_1digit.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../sequential/latches_and_flipflops/T_FF/T_FF_sync.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/RTL/pwm_enc.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -70,7 +84,6 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="pwm_enc"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -80,11 +93,17 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PPRDIR/../sequential/counters/synchronous/BCD_counter/BCD_counter_1digit_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="pwm_enc"/>
+        <Option Name="TopModule" Val="BCD_counter_1digit_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>

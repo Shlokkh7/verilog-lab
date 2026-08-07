@@ -1,0 +1,15 @@
+# Vivado generated project junk — never push this
+vivado_proj/
+*.jou
+*.log
+*.str
+*.backup.log
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+webtalk*.log
+vivado_build.log

@@ -2,8 +2,8 @@
 
 module T_FF_async(
     input clk,
-    input preset_n,
-    input reset_n,
+    // input preset_n,
+    input reset,            // Asynchronous (Active high)
     input T,
     output Q
     );
@@ -11,22 +11,22 @@ module T_FF_async(
     reg Q_reg;
     wire Q_next;
     // State Registers
-    always @(posedge clk, negedge reset_n, negedge preset_n) begin
-        if (!reset_n)
+    always @(posedge clk, posedge reset/*, negedge preset_n*/) begin
+        if (reset)
             Q_reg <= 1'b0;
-        else if (!preset_n)
-            Q_reg <= 1'b1;
+//        else if (!preset_n)
+//            Q_reg <= 1'b1;
         else
             Q_reg <= Q_next;
     end
     
     // Next State
-    //assign Q_next = T ? ~Q_reg: Q_reg;
-    mux_generic_1bit #(.INS(2)) MUX0 (
-        .w({~Q_reg, Q_reg}),
-        .s(T),
-        .f(Q_next)
-    );
+    assign Q_next = T ? ~Q_reg: Q_reg;
+//    mux_generic_1bit #(.INS(2)) MUX0 (
+//        .w({~Q_reg, Q_reg}),
+//        .s(T),
+//        .f(Q_next)
+//    );
     // Output Logic
     assign Q = Q_reg;
 endmodule

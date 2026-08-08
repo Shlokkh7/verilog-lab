@@ -2,7 +2,7 @@
 
 module SISO_tb();
 
-    parameter n = 5;
+    parameter n = 1;
     reg clk;
     reg reset_n;
     reg SI;

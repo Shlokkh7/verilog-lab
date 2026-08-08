@@ -2,7 +2,7 @@
 
 module T_FF_sync(
     input clk,
-    input clear_n,
+    input clear_n,          // Synchronous (Active low)
     input T,
     output Q
     );

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module SISO    // Right Shift
-    #(parameter n = 1)
+    #(parameter n = 4)
     (
     input clk, reset_n,
     input SI,       // Shift In
